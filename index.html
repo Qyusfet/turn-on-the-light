@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Switching</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="note">
+        <h1>Light Switching with Javascript</h2>
+
+        <p>JavaScript can change HTML attribute values.</p>
+
+        <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    </div>
+
+    <div class="switch">
+        <p id="status"></p>
+        <button id="myBtn1">Turn on the light</button>
+
+        <img id="myImage" src="assets/pic_bulboff.gif">
+        <button id="myBtn2">Turn off the light</button>
+    </div>
+
+
+    <script type="text/javascript">
+        const btn1 = document.getElementById("myBtn1");
+        const btn2 = document.getElementById("myBtn2");
+        btn1.addEventListener("click", bulbon);
+        btn2.addEventListener("click", bulboff);
+
+        function bulbon() {
+            document.getElementById("status").innerHTML = "The light is on";
+            document.getElementById("myImage").src = 'assets/pic_bulbon.gif';
+        }
+
+        function bulboff() {
+            document.getElementById("status").innerHTML = "The light is off";
+            document.getElementById("myImage").src = 'assets/pic_bulboff.gif';
+        }
+
+    </script>
+</body>
+</html>
